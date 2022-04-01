@@ -1,50 +1,40 @@
 {
-  "name": "doorbot",
-  "version": "5.4.0",
-  "description": "Ring.com Doorbell API",
-  "main": "doorbot.js",
+  "name": "google-assistant",
+  "version": "0.7.0",
+  "description": "node.js port of the 3rd party Google Assistant SDK",
+  "main": "index.js",
   "scripts": {
-    "pretest": "eslint --fix .",
-    "test": "jenkins-mocha ./tests/*.js",
-    "posttest": "nyc report"
-  },
-  "nyc": {
-    "lines": 100,
-    "statements": 100,
-    "functions": 100,
-    "branches": 90,
-    "check-coverage": true,
-    "reporter": [
-      "text",
-      "text-summary"
-    ]
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:davglass/doorbot.git"
+    "url": "git+https://endoplasmic@github.com/endoplasmic/google-assistant.git"
   },
   "keywords": [
-    "ring",
-    "doorbell"
+    "google assistant"
   ],
-  "author": "Dav Glass <davglass@gmail.com>",
-  "license": "BSD-3-Clause",
+  "author": "Scott Ysebert <endoplasmic@gmail.com>",
+  "contributors": [
+    {
+      "name": "Carlos Knoke Flores",
+      "email": "carlos@knoke.net"
+    }
+  ],
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davglass/doorbot/issues"
+    "url": "https://github.com/endoplasmic/google-assistant/issues"
   },
-  "homepage": "https://github.com/davglass/doorbot",
-  "devDependencies": {
-    "eslint": "^8.12.0",
-    "jenkins-mocha": "^9.0.0",
-    "nock": "^9.6.1",
-    "nyc": "^15.1.0"
-  },
+  "homepage": "https://github.com/endoplasmic/google-assistant#readme",
   "dependencies": {
-    "async": "^3.2.3",
-    "dateformat": "^5.0.3",
-    "debug": "^2.6.8",
-    "doorbot": "^5.4.0",
+    "@grpc/grpc-js": "^1.3.7",
+    "google-auth-library": "^7.0.4",
     "mkdirp": "^1.0.4",
-    "request": "^2.88.2"
+    "open": "^8.0.6",
+    "protobufjs": "^6.10.2",
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "node-record-lpcm16": "git+https://github.com/endoplasmic/node-record-lpcm16.git",
+    "speaker": "^0.5.3"
   }
 }
