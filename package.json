@@ -1,0 +1,50 @@
+{
+  "name": "doorbot",
+  "version": "5.4.0",
+  "description": "Ring.com Doorbell API",
+  "main": "doorbot.js",
+  "scripts": {
+    "pretest": "eslint --fix .",
+    "test": "jenkins-mocha ./tests/*.js",
+    "posttest": "nyc report"
+  },
+  "nyc": {
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 90,
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "text-summary"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:davglass/doorbot.git"
+  },
+  "keywords": [
+    "ring",
+    "doorbell"
+  ],
+  "author": "Dav Glass <davglass@gmail.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/davglass/doorbot/issues"
+  },
+  "homepage": "https://github.com/davglass/doorbot",
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "jenkins-mocha": "^9.0.0",
+    "nock": "^9.6.1",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "async": "^3.2.3",
+    "dateformat": "^5.0.3",
+    "debug": "^2.6.8",
+    "doorbot": "^5.4.0",
+    "mkdirp": "^1.0.4",
+    "request": "^2.88.2"
+  }
+}
